@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Wed Jun 23 17:27:50 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : SIMPLE_MIPS_PROCESSOR
+Top-level Entity Name : MIPS_PROCESSOR
+Family : MAX 10
+Device : 10M16SAE144A7G
+Power Models : Final
+Total Thermal Power Dissipation : 222.00 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 215.52 mW
+I/O Thermal Power Dissipation : 6.48 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

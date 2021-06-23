@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity MAIN_CONTROL is
+
+port(
+
+);
+
+end MAIN_CONTROL;
+
+architecture ARCH_1 of MAIN_CONTROL is
+
+	begin
+	
+end ARCH_1;

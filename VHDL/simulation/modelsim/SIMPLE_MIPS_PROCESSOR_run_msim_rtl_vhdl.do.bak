@@ -1,0 +1,9 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/ALU.vhd}
+

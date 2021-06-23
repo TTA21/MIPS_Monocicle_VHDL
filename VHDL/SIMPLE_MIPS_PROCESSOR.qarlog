@@ -1,0 +1,30 @@
+Quartus Prime Archive log --	/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/SIMPLE_MIPS_PROCESSOR.qarlog
+
+Archive:	/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/SIMPLE_MIPS_PROCESSOR.qar
+Date:		Mon Jun  7 20:32:24 2021
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/FPGA/quartus/linux64/assignment_defaults.qdf
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/ALU.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/ALU_CONTROL.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/CONCATONATE_28_4_32.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/DATA_MEMORY.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/INSTRUCTION_MEMORY.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/MAIN_CONTROL.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/MIPS_PROCESSOR.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/MUX_2_32_32.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/MUX_2_5_5.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/PROGRAM_COUNTER.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/PROGRAM_COUNTER_ADDER.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/REGISTER_FILE.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/SHIFT_2_LEFT_26_28.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/SHIFT_2_LEFT_32_32.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/SIGN_EXT_16_32.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/SIMPLE_32_ADDER.vhd
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/SIMPLE_MIPS_PROCESSOR.qpf
+/home/tta21/Documents/work/Univali/Arquitetura_e_organizacao_de_processadores/MIPS_VHDL/SIMPLE_MIPS_PROCESSOR.qsf
+	======= Total: 19 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

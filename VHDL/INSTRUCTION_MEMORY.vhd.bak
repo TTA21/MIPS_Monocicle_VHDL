@@ -1,0 +1,82 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity INSTRUCTION_MEMORY is
+
+port(
+
+    i_CLOCK     :   in std_logic;
+	i_ADDR      :   in std_logic_vector(31 downto 0) := x"00400000";
+    o_INS_OUT   :   out std_logic_vector(31 downto 0)
+
+);
+
+end INSTRUCTION_MEMORY;
+
+architecture ARCH_1 of INSTRUCTION_MEMORY is
+
+    ---                        32 should be enought
+    type t_RAM is array ( 0 to 31 ) of std_logic_vector( 31 downto 0 );
+	signal INST	:	t_RAM := (
+        x"20120001",    ---addi $s2, $zero, 1    # Inicializa $s2 em 1 
+        x"3c011001",    ---lui  $1, 0x00001001   # como o exercício assume que o endereço-base de A[]
+                        ---                      # está em $s3, foi incluida esta instrução
+        x"34330000",    ---ori  $19, $1, 0x0000000
+        x"8e680020",    ---lw   $t0, 32($s3)     # $t0 = A[8] 
+        x"02484020",    ---add  $t0, $s2, $t0    # $t0 = $t0 + h
+        x"ae680030",    ---sw   $t0, 48($s3)     # A[12] = $t
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000",
+        x"00000000"
+    );
+
+	begin
+
+    ---Reference:
+    --- .text (0x00400000, or 0d4194304) <- offset
+    ---                               ^ reset when 0 or 4, 0 is 0x003FFFFC
+
+    --process (i_CLOCK, i_ADDR) begin
+
+    --    if(rising_edge(i_CLOCK)) then
+    --        if(i_ADDR = x"003FFFFC") then
+    --            o_INS_OUT <= "00000000000000000000000000000000";
+    --        else
+    --            o_INS_OUT <= INST(( to_integer(unsigned(i_ADDR)) - 4194304)/4);
+    --        end if;
+    --    end if;
+
+    --end process;
+
+    --o_INS_OUT <= "00000000000000000000000000000000" when i_ADDR = x"003FFFFC"
+    --           else INST(( to_integer(unsigned(i_ADDR)) - 4194304)/4);
+
+    o_INS_OUT <= x"00000000" when i_ADDR = x"003FFFFC" or i_ADDR = "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU"
+                 else INST(( to_integer(unsigned(i_ADDR)) - 4194304)/4);
+
+	
+end ARCH_1;

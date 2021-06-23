@@ -1,0 +1,25 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity ALU_CONTROL is
+
+port(
+
+	i_opA
+
+);
+
+end ALU_CONTROL;
+
+architecture ARCH_1 of ALU_CONTROL is
+
+
+	begin
+	
+	process () begin
+	
+	end process;
+	
+	
+end ARCH_1;

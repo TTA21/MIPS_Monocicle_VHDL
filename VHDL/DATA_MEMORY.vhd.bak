@@ -1,0 +1,46 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity DATA_MEMORY is
+
+port(
+
+    i_CLK       :   in std_logic;
+    i_rMEM      :   in std_logic;
+    i_wMEM      :   in std_logic;
+
+    i_ADDR      :   in std_logic_vector(31 downto 0);
+    i_DATA_IN   :   in std_logic_vector(31 downto 0);
+    o_OUT       :   out std_logic_vector(31 downto 0)
+
+);
+
+end DATA_MEMORY;
+
+architecture ARCH_1 of DATA_MEMORY is
+
+    ---2 ^ 30 = 0x40000000 ... yeah, no. 
+    --From .data(0x10010000, 0d268500992) down, and only 16 addresses, not like i'm gonna use it all
+
+    type t_RAM is array ( 0 to 16 ) of std_logic_vector( 31 downto 0 );
+	signal RAM	:	t_RAM := (others=>(others=>'0'));
+
+	begin
+
+        process (i_CLK, i_rMEM, i_wMEM) begin
+            if(rising_edge(i_CLK)) then
+
+                if(i_wMEM) then
+                    RAM((to_integer(unsigned(i_ADDR)) - 268500992) / 4) <= i_DATA_IN;
+                    ---             address           - offset     / 4   = in range of 0 to 16
+                end;
+
+                if(i_rMEM) then
+                    o_OUT <= RAM((to_integer(unsigned(i_ADDR)) - 268500992) / 4);
+                end if;
+
+            end if; --i_CLK
+        end if;
+	
+end ARCH_1;
